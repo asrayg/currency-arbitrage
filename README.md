@@ -4,7 +4,7 @@ This repository contains scripts for detecting arbitrage opportunities in curren
 
 # Scientific Paper
 
-Wrote a scientific paper on the subject mat ter. Check out the pdf in the repo.
+Wrote a scientific paper on the subject matter. Check out the pdf in the repo.
 
 ## Project Structure
 

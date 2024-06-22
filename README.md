@@ -2,6 +2,10 @@
 
 This repository contains scripts for detecting arbitrage opportunities in currency exchange rates using various algorithms and optimizations. The scripts are organized into multiple files, each showcasing different approaches and optimizations. The project also includes a Flask server to run the detection script continuously and serve results via a web API.
 
+# Scientific Paper
+
+Wrote a scientific paper on the subject mat ter. Check out the pdf in the repo.
+
 ## Project Structure
 
 ```

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Arbitrage Detection</title>
+</head>
+<body>
+    <h1>Currency Arbitrage Detection</h1>
+    <button onclick="detectArbitrage()">Detect Arbitrage</button>
+    <div id="results"></div>
+
+    <script>
+        function detectArbitrage() {
+            fetch('/detect-arbitrage')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = '';
+                    if (data.length > 0) {
+                        data.forEach(result => {
+                            const cycle = result.cycle.join(' -> ');
+                            const profit = result.profit;
+                            resultsDiv.innerHTML += `<p>Cycle: ${cycle} | Profit: ${profit}</p>`;
+                        });
+                    } else {
+                        resultsDiv.innerHTML = '<p>No arbitrage opportunities detected.</p>';
+                    }
+                });
+        }
+    </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Currency Arbitrage Detection
 
-This repository contains scripts for detecting arbitrage opportunities in currency exchange rates using various algorithms and optimizations. The scripts are organized into multiple files, each showcasing different approaches and optimizations. The project also includes a Flask server to run the detection script continuously and serve results via a web API.
+This repository contains scripts for detecting arbitrage opportunities in currency exchange rates using various algorithms and optimizations. The scripts are organized into multiple files, each showcasing different approaches and optimizations. The project also includes a Flask server to run the detection script continuously and serve results via a web API. The system uses advanced algorithms, graph theory, and machine learning techniques to enhance performance and provide trading recommendations.
 
 # Scientific Paper
 
@@ -10,6 +10,9 @@ Wrote a scientific paper on the subject matter. Check out the pdf in the repo.
 
 ```
 currency-arbitrage/
+├── mode;
+│   ├── Model.ipynb
+│   └── modelApp.py
 ├── OtherMethods
 │   ├── using-hardware.py
 │   └── waytoolong.py
@@ -107,6 +110,23 @@ The Floyd-Warshall algorithm is an all-pairs shortest path algorithm that can fi
 1. **Asynchronous Requests**: Using `aiohttp` for non-blocking HTTP requests.
 2. **Parallel Processing**: Leveraging `multiprocessing` and `concurrent.futures` for parallel execution.
 3. **Early Stopping**: Modifying the Bellman-Ford algorithm to stop early if no updates are made.
+
+### Sentiment Analysis and Trading Recommendations
+## Data Collection
+News articles and social media posts related to various countries are collected using APIs like NewsAPI and Twitter API. The data is then preprocessed to remove noise and extract meaningful information.
+
+## Sentiment Analysis
+Sentiment analysis is performed on the collected data using the VADER sentiment analysis tool. This helps in determining the overall sentiment (positive, negative, neutral) towards a country's economy.
+
+## Feature Extraction
+Features such as sentiment score, GDP growth rate, and inflation rate are extracted from the data. These features are then used to train machine learning models to predict currency movements.
+
+## Model Training
+A Random Forest model is trained using the extracted features to predict the direction and magnitude of currency movements. The model is evaluated and fine-tuned to improve its accuracy.
+
+## Trading Recommendations
+Based on the model's predictions, a recommendation system provides trading advice. Traders can use this system to make informed decisions about buying, selling, or holding currency pairs.
+
 
 ## Scripts Overview
 
